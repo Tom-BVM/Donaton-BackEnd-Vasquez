@@ -1,0 +1,51 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MicroSDonacionesApplication",
+            "request": "launch",
+            "mainClass": "com.example.MicroS_donaciones.MicroSDonacionesApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroSAuthApplication<MicroS-Auth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Donaton.MicroS_Auth.MicroSAuthApplication",
+            "projectName": "MicroS-Auth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroSDonacionesApplication<MicroS-Donaciones>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.donaton.MicroS_Donaciones.MicroSDonacionesApplication",
+            "projectName": "MicroS-Donaciones",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroSLogisticaApplication<MicroS-Logistica>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.donaton.MicroS_Logistica.MicroSLogisticaApplication",
+            "projectName": "MicroS-Logistica",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroSNecesidadesApplication<MicroS-Necesidades>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.donaton.MicroS_Necesidades.MicroSNecesidadesApplication",
+            "projectName": "MicroS-Necesidades",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
