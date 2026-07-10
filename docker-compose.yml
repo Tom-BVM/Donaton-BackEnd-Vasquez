@@ -6,7 +6,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -52,5 +52,22 @@ services:
       mysql:
         condition: service_healthy
 
+  # SERVIDOR DE SONARQUBE (Añadido con éxito)
+  sonarqube:
+    image: sonarqube:lts-community
+    container_name: donaton-sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonar_data:/opt/sonarqube/data
+      - sonar_extensions:/opt/sonarqube/extensions
+      - sonar_logs:/opt/sonarqube/logs
+
 volumes:
   mysql_data:
+  # Volúmenes requeridos para el almacenamiento de SonarQube
+  sonar_data:
+  sonar_extensions:
+  sonar_logs:
