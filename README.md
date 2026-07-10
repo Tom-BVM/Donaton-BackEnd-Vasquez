@@ -26,13 +26,14 @@ Ecosistema de servicios distribuidos desarrollado en Java Spring Boot para sopor
 - **Puerto de red:** 8082
 - **Responsabilidad:** Gestión de la recaudación monetaria. Recibe peticiones estructuradas alineadas con los campos relacionales de la entidad (tipo, cantidad, fecha, usuarioId) y gestiona la persistencia en su base de datos dedicada. Incluye políticas explícitas de @CrossOrigin para el puerto 3000.
 
-### 3. Microservicio de Necesidades (Necesidades)
-- **Puerto de red:** 8083
-- **Responsabilidad:** Registro y clasificación de las intenciones de ayuda en especie como ropa en buen estado, insumos básicos o materiales de construcción. Vincula las ofertas materiales con el identificador del usuario donante.
-
 ### 4. Microservicio de Logística (Logística)
-- **Puerto de red:** 8084
+- **Puerto de red:** 8083
 - **Responsabilidad:** Control del flujo físico de las ayudas. Gestiona el estado de los traslados y envíos activos (Donación en preparación, Donación enviada, En camino, Llegada) para garantizar la transparencia de los despachos hacia los campamentos y zonas afectadas.
+
+
+### 3. Microservicio de Necesidades (Necesidades)
+- **Puerto de red:** 8084
+- **Responsabilidad:** Registro y clasificación de las intenciones de ayuda en especie como ropa en buen estado, insumos básicos o materiales de construcción. Vincula las ofertas materiales con el identificador del usuario donante.
 
 ---
 
@@ -84,6 +85,6 @@ docker compose up --build
 ### 4. Puertos de acceso y monitoreo local
 - Microservicio Auths: http://localhost:8081
 - Microservicio Donaciones: http://localhost:8082
-- Microservicio Necesidades: http://localhost:8083
-- Microservicio Logística: http://localhost:8084
+- Microservicio Logística: http://localhost:8083
+- Microservicio Necesidades: http://localhost:8084
 - Panel de Calidad SonarQube: http://localhost:9000
